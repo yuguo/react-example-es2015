@@ -1,18 +1,17 @@
 var path = require('path');
 var webpack = require('webpack');
-var ROOT_PATH = path.resolve(__dirname);
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
-    entry: [path.resolve(ROOT_PATH, 'app/main.jsx')],
+    entry: [path.resolve(__dirname, 'app/main.jsx')],
 
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
 
     output: {
-        path: path.resolve(ROOT_PATH, 'build'),
+        path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
     },
 
